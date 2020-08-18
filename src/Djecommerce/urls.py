@@ -2,15 +2,17 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-
+ 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('', include('core.urls')),
     path('checkout/', include('core.urls')),
+    path('products/', include('core.urls')),
+    path('login/', include('core.urls')),
 ]
 
-
+# This is core project urls
 
 if settings.DEBUG:
     import debug_toolbar

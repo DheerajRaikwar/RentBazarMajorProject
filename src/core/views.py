@@ -8,7 +8,12 @@ def item_list(request):
     }
     return render(request,'home-page.html', context)
 
-def show_checkout(request):
+def checkout(request):
     return render(request, 'checkout-page.html', {})
 
+def products(request):
+    return render(request, 'product-page.html', {})
 # python manage.py 
+
+def login(request):
+    return render(request, 'login.html')
